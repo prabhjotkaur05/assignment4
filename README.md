@@ -9,7 +9,7 @@ Prabhjot Kaur
 ## pixell_transaction_report.py
 This program process transactions with exception handling, data validation.
 
-## Code ModificatioN1
+## Code ModificatioN
 - Added handling for file errors and general exceptions.
 
 - Validated transaction types and amounts to ensure only valid data is processed.
