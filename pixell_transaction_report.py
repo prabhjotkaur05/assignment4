@@ -39,9 +39,6 @@ if not os.path.exists(DATA_FILE_PATH):
 with open(DATA_FILE_PATH, 'r') as csv_file:
     reader = csv.reader(csv_file)
 
-    # Place breakpoint here
-    next(reader)
-
     # Skip heading line
     next(reader)
 
@@ -75,7 +72,7 @@ with open(DATA_FILE_PATH, 'r') as csv_file:
                 customer_data[customer_id] = {'balance': 0, 'transactions': []}
             # Update the customer's account balance based on the 
             # transaction type
-            elif transaction_type == 'deposit':
+            if transaction_type == 'deposit':
                 customer_data[customer_id]['balance'] += transaction_amount
                 transaction_count += 1
                 total_transaction_amount += transaction_amount
@@ -109,7 +106,11 @@ for customer_id, data in customer_data.items():
         amount, type = transaction
         print(f"{type.capitalize():>16}:{amount:>12}")
 
-average_transaction_amount = total_transaction_amount / transaction_count
+if transaction_count > 0:
+    average_transaction_amount = total_transaction_amount / transaction_count
+else:
+    average_transaction_amount = 0
+
 print(f"AVERAGE TRANSACTION AMOUNT: {average_transaction_amount}")
 
 rejected_report_title = "REJECTED RECORDS"
