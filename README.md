@@ -7,7 +7,7 @@ In this assignment, debugging utility is used in IDE(integrated development envi
 Prabhjot Kaur
 
 ## pixell_transaction_report.py
-This program process transactions with exception handling, data validation.
+This program process transactions with exception handling, data validation. 
 
 ## Code Modification
 - Added handling for file errors and general exceptions.
