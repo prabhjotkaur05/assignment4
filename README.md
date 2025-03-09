@@ -12,7 +12,7 @@ This program process transactions with exception handling, data validation.
 ## Code Modification
 - Added handling for file errors and general exceptions.
 
-- Validated transaction types and amounts to ensure only valid data is processed.
+- Validated transaction types and amounts to ensure only valid data is processed.  
 
 - Captured invalid records and corresponding error messages for review.
 
